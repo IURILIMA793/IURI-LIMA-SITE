@@ -1,55 +1,78 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Iuri Lima, técnico de audiovisual, eventos desportivos e sistemas LED."
+      content="Portfólio de Iuri Lima, técnico de audiovisual, eventos desportivos, live production e sistemas LED em Portugal."
     />
-    <title>Iuri Lima | Técnico Audiovisual</title>
+
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Iuri Lima | Técnico Audiovisual & LED" />
+    <meta
+      property="og:description"
+      content="Especialista em ecrãs LED, processamento de vídeo e eventos ao vivo."
+    />
+    <meta property="og:image" content="imagens/obidos-geral-regie.jpg" />
+    <meta property="og:url" content="https://iurilima.netlify.app/" />
+
+    <title>Iuri Lima | Técnico Audiovisual & LED Specialist</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link
       rel="shortcut icon"
-      href="1 imagens /favicon.ico"
+      href="1-imagens/favicon.ico"
       type="image/x-icon"
     />
   </head>
   <body>
+    <!-- Header / Hero Section -->
     <header class="hero">
       <img
         class="hero__image"
-        src="1 imagens /img superor.png"
-        alt=""
+        src="1-imagens/img-superor.png"
+        alt="Equipamentos de audiovisual e regie de vídeo"
         onerror="this.hidden = true"
       />
       <div class="hero__content">
         <h1>LED Audiovisual Technician</h1>
-         <p class="hero__tagline">
+        <p class="hero__tagline">
           Sports Events • LED Systems • Live Production
         </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Entrar em Contacto</a>
+          <a href="#porto-title" class="btn btn--outline">Ver Projetos</a>
+        </div>
       </div>
     </header>
-    
-    <!--Cabeçalho-->
+
+    <!-- Main Content -->
     <main class="site-shell">
+      <!-- Section: Festa Porto FC 2026 -->
       <section class="section porto-section" aria-labelledby="porto-title">
         <h2 class="section-heading" id="porto-title">Festa Porto FC 2026</h2>
         <div class="porto-grid">
           <figure class="porto-media media-frame media-frame--portrait">
-            <video controls autoplay muted loop>
-              <source src="1 videos/festa porto aerea.mp4" type="video/mp4" />
+            <video controls autoplay muted loop playsinline>
+              <source src="1-videos/festa-porto-aerea.mp4" type="video/mp4" />
+              Seu navegador não suporta a exibição deste vídeo.
             </video>
           </figure>
 
-
-
-          <!--Festa doPorto 2026-->
-
           <div class="porto-copy">
             <p>
-              Responsável por toda a gestão dos ecrãs LED. Havia dois ecrãs
-              de 7 × 12 metros e mais cinco ecrãs para o restante da avenida, em
+              Responsável por toda a gestão dos ecrãs LED. Havia dois ecrãs de 7
+              × 12 metros e mais cinco ecrãs para o restante da avenida, em
               formato 16:9. Fiz o gerenciamento e processamento em conjunto com
               os softwares NovaLCT, para configurar o mapping de cada LED, e
               processadores MCTRL4K e VX1000.
@@ -61,37 +84,30 @@
               estavam interligados via rede, com uma Stream Deck XL para
               operação.
             </p>
-            <blockquote>
-              “Não tive de fazer a operação no dia do jogo. Mais tarde, realizei
-              todo o processo de montagem e mapping para o mesmo funcionar como
-              esperado.”
-            </blockquote>
           </div>
 
           <figure class="porto-media media-frame media-frame--portrait-tall">
-            <video controls autoplay muted loop>
-              <source
-                src="1 videos/festa porto regie.MOV"
-                type="video/mp4"
+            <video controls autoplay muted loop playsinline>
+              <source src="1-videos/festa-porto-regie.MOV" type="video/mp4" />
+              Seu navegador não suporta a exibição deste vídeo.
             </video>
           </figure>
         </div>
       </section>
 
-
-      <!-- Final Four 2026-->
-
-
       <hr class="divider" />
 
-      <section class="section final-four-section" aria-labelledby="final-four-title">
+      <!-- Section: Final Four 2026 -->
+      <section
+        class="section final-four-section"
+        aria-labelledby="final-four-title"
+      >
         <h2 class="section-heading" id="final-four-title">Final Four 2026</h2>
         <div class="final-four-grid">
           <figure class="final-four-media media-frame media-frame--portrait">
-            <video controls autoplay muted loop>
-              <source
-                src="1 videos/finalFour edit.mp4"
-                type="video/mp4"
+            <video controls autoplay muted loop playsinline>
+              <source src="1-videos/finalFour-edit.mp4" type="video/mp4" />
+              Seu navegador não suporta a exibição deste vídeo.
             </video>
           </figure>
 
@@ -114,11 +130,12 @@
             </blockquote>
           </div>
 
-          <figure class="final-four-media media-frame media-frame--portrait-tall">
-           <video controls autoplay muted loop>
-              <source
-                src="1 videos/finalFour geral.mov"
-                type="video/mp4"
+          <figure
+            class="final-four-media media-frame media-frame--portrait-tall"
+          >
+            <video controls autoplay muted loop playsinline>
+              <source src="1-videos/finalFour-geral.mov" type="video/mp4" />
+              Seu navegador não suporta a exibição deste vídeo.
             </video>
           </figure>
         </div>
@@ -126,10 +143,11 @@
 
       <hr class="divider" />
 
-      <!--Óbidos Vila Gamming 2026-->
-
+      <!-- Section: Vila Gaming Óbidos 2026 -->
       <section class="section obidos-section" aria-labelledby="obidos-title">
-        <h2 class="section-heading" id="obidos-title">Vila Gaming Óbidos 2026</h2>
+        <h2 class="section-heading" id="obidos-title">
+          Vila Gaming Óbidos 2026
+        </h2>
         <div class="obidos-copy">
           <p>
             Neste trabalho, fui responsável por receber os sinais de oito PS5 e
@@ -143,21 +161,21 @@
         <div class="obidos-gallery">
           <figure class="obidos-media media-frame">
             <img
-              src="1 imagens /obidos geral regie.jpg"
-              alt="Regie de video"
+              src="1-imagens/obidos-geral-frente.jpg"
+              alt="Mesa de regie de vídeo da Vila Gaming Óbidos"
               onerror="this.hidden = true"
             />
           </figure>
           <figure class="obidos-media media-frame">
             <img
-              src="1 imagens /obidos selfie.jpg"
-              alt="Selfie minha na regie de video"
+              src="1-imagens/obidos-selfie.jpg"
+              alt="Iuri Lima na regie de vídeo do evento"
               onerror="this.hidden = true"
             />
           </figure>
           <figure class="obidos-media media-frame">
             <img
-              src="1 imagens /obidos geral frente.jpg"
+              src="1-imagens/obidos-geral-regie.jpg"
               alt="Cabines e ecrãs LED da Vila Gaming Óbidos"
               onerror="this.hidden = true"
             />
@@ -167,8 +185,9 @@
 
       <hr class="divider" />
 
+      <!-- Section: Sobre Mim -->
       <section class="section about" aria-labelledby="about-title">
-        <h2 class="section-heading" id="about-title">Técnico em audiovisual</h2>
+        <h2 class="section-heading" id="about-title">Técnico em Audiovisual</h2>
         <div class="about-copy">
           <p>
             Chamo-me Iuri Lima, sou brasileiro e técnico de audiovisual desde
@@ -187,8 +206,51 @@
         </div>
       </section>
 
-      <footer class="section contact">
-        <p>Iuri Lima · Sports Events · LED Systems · Live Production</p>
+      <!-- Section: Contato / Footer -->
+      <footer
+        class="section contact"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <h2 class="contact-title" id="contact-title">Entre em Contacto</h2>
+        <p class="contact-subtitle">
+          Disponível para freelancers, coordenação técnica e eventos desportivos
+          em Portugal e na Europa.
+        </p>
+
+        <div class="contact-links">
+          <a
+            href="https://wa.me/message/7CERHTNN257AD1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card"
+          >
+            <span class="contact-card__icon">💬 </span>
+            <span class="contact-card__label">WhatsApp</span>
+            <span class="contact-card__val">+351 937 397 563</span>
+          </a>
+
+          <a href="mailto:seu-email@exemplo.com" class="contact-card">
+            <span class="contact-card__icon">✉️</span>
+            <span class="contact-card__label">E-mail</span>
+            <span class="contact-card__val">contato@iurilima.dev</span>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/seu-perfil"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card"
+          >
+            <span class="contact-card__icon">🔗</span>
+            <span class="contact-card__label">LinkedIn</span>
+            <span class="contact-card__val">/in/iurilima</span>
+          </a>
+        </div>
+
+        <div class="footer-copy">
+          <p>© Iuri Lima · Sports Events · LED Systems · Live Production</p>
+        </div>
       </footer>
     </main>
   </body>
