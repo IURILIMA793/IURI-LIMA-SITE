@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-  color-scheme: dark light;
+  color-scheme: dark;
   --page-bg: #589ee532;
   --card-bg: #057aef1b;
   --ink: rgba(216, 215, 215, 0.671);
