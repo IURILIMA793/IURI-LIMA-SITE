@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+/* TEMA DE thema2: ativado com data-theme="natal" no elemento html de index.html. */
+
+/* -- para trocar o fundo so tirar none e colocar esse cod (com a imagem escolhida na pasta)
+theme-background-image: url("1-imagens/fundo-natal-exemple.jpg");*/
+
+:root[data-theme="thema2"] {
+  --page-bg: rgba(26, 149, 38, 0.413);
+  --theme-background-image: none;
+  --card-bg: rgba(9, 237, 9, 0.189);
+  --accent: red;
+  --accent-hover: #c83232;
+  --accent-soft: rgba(75, 230, 109, 0.93);
+  --line: red;
+}
+
+/* TEMA DE thema3: ativado com data-theme="pascoa" no elemento html de index.html. */
+:root[data-theme="thema3"] {
+  --page-bg: rgba(133, 85, 173, 0.16);
+  --theme-background-image: none;
+  --card-bg: rgba(229, 172, 217, 0.15);
+  --accent: #c06ccf;
+  --accent-hover: #9848a8;
+  --accent-soft: rgba(192, 108, 207, 0.12);
+  --line: #ead6f2;
+}
+
 /* TEMA PADRÃO: personalize as cores e a imagem de fundo do tema normal. */
 :root {
   color-scheme: dark;
@@ -13,34 +39,18 @@
   --accent-soft: rgba(0, 162, 255, 0.1);
   --line: #ffffff;
   --hero-background: #0d1013;
-  --hero-overlay: linear-gradient(180deg, rgba(13, 16, 19, 0.2) 0%, rgba(18, 21, 24, 0.188) 100%);
+  --hero-overlay: linear-gradient(
+    180deg,
+    rgba(13, 16, 19, 0.2) 0%,
+    rgba(18, 21, 24, 0.188) 100%
+  );
   --surface-border: rgba(255, 255, 255, 0.08);
   --soft-border: rgba(255, 255, 255, 0.05);
   --menu-background: #0b1c44;
   --content-width: 1400px;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* TEMA DE NATAL: ativado com data-theme="natal" no elemento html de index.html. */
-:root[data-theme="natal"] {
-  --page-bg: rgba(11, 57, 34, 0.2);
-  --theme-background-image: url("1-imagens/fundo-natal.jpeg");
-  --card-bg: rgba(34, 139, 76, 0.16);
-  --accent: #e64b4b;
-  --accent-hover: #c83232;
-  --accent-soft: rgba(230, 75, 75, 0.1);
-  --line: #f2d6a2;
-}
-
-/* TEMA DE PÁSCOA: ativado com data-theme="pascoa" no elemento html de index.html. */
-:root[data-theme="pascoa"] {
-  --page-bg: rgba(133, 85, 173, 0.16);
-  --theme-background-image: url("1-imagens/fundo-pascoa.jpeg");
-  --card-bg: rgba(229, 172, 217, 0.15);
-  --accent: #c06ccf;
-  --accent-hover: #9848a8;
-  --accent-soft: rgba(192, 108, 207, 0.12);
-  --line: #ead6f2;
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 }
 
 /* BASE GLOBAL: dimensões, tipografia e fundo geral do site. */
@@ -57,29 +67,14 @@ html {
 body {
   min-width: 320px;
   background-color: var(--page-bg);
+  background-image: var(--theme-background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-}
-
-.projects-background {
-  position: relative;
-  isolation: isolate;
-}
-
-.projects-background::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background-image: var(--theme-background-image);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  filter: blur(3px);
-  content: "";
-  pointer-events: none;
 }
 
 img,
@@ -393,7 +388,9 @@ video {
   background: var(--page-bg);
   color: var(--ink);
   text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .contact-card:hover {
@@ -469,7 +466,9 @@ video {
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .whatsapp-menu a:not(:last-child) {
