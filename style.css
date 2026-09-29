@@ -1,18 +1,49 @@
 @charset "UTF-8";
 
+/* TEMA PADRÃO: personalize as cores e a imagem de fundo do tema normal. */
 :root {
   color-scheme: dark;
   --page-bg: #589ee532;
+  --theme-background-image: none;
   --card-bg: #057aef1b;
   --ink: rgba(216, 215, 215, 0.671);
   --muted: #ffffffcd;
   --accent: #00a2ff;
   --accent-hover: #0082cc;
-  --line: white;
+  --accent-soft: rgba(0, 162, 255, 0.1);
+  --line: #ffffff;
+  --hero-background: #0d1013;
+  --hero-overlay: linear-gradient(180deg, rgba(13, 16, 19, 0.2) 0%, rgba(18, 21, 24, 0.188) 100%);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --soft-border: rgba(255, 255, 255, 0.05);
+  --menu-background: #0b1c44;
   --content-width: 1400px;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* TEMA DE NATAL: ativado com data-theme="natal" no elemento html de index.html. */
+:root[data-theme="natal"] {
+  --page-bg: rgba(11, 57, 34, 0.2);
+  --theme-background-image: url("1-imagens/fundo-natal.jpeg");
+  --card-bg: rgba(34, 139, 76, 0.16);
+  --accent: #e64b4b;
+  --accent-hover: #c83232;
+  --accent-soft: rgba(230, 75, 75, 0.1);
+  --line: #f2d6a2;
+}
+
+/* TEMA DE PÁSCOA: ativado com data-theme="pascoa" no elemento html de index.html. */
+:root[data-theme="pascoa"] {
+  --page-bg: rgba(133, 85, 173, 0.16);
+  --theme-background-image: url("1-imagens/fundo-pascoa.jpeg");
+  --card-bg: rgba(229, 172, 217, 0.15);
+  --accent: #c06ccf;
+  --accent-hover: #9848a8;
+  --accent-soft: rgba(192, 108, 207, 0.12);
+  --line: #ead6f2;
+}
+
+/* BASE GLOBAL: dimensões, tipografia e fundo geral do site. */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +63,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.projects-background {
+  position: relative;
+  isolation: isolate;
+}
+
+.projects-background::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: var(--theme-background-image);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(3px);
+  content: "";
+  pointer-events: none;
+}
+
 img,
 video {
   display: block;
@@ -44,7 +94,78 @@ video {
   margin-inline: auto;
 }
 
-/* --- HERO SECTION --- */
+/* TÍTULOS: estilos partilhados pelos títulos dos projetos e das restantes secções. */
+.hero h1,
+.section-heading,
+.contact-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 {
+  margin-inline: auto;
+  font-size: clamp(2.2rem, 5.5vw, 5rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin-bottom: clamp(32px, 5vw, 64px);
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.contact-title {
+  margin-bottom: 12px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+/* PARÁGRAFOS: cor, tamanho e espaçamento dos textos do site num só bloco. */
+.hero__tagline,
+.porto-copy p,
+.final-four-copy p,
+.obidos-copy p,
+.about-copy p,
+.contact-subtitle,
+.footer-copy {
+  color: var(--muted);
+}
+
+.hero__tagline {
+  margin-top: 16px;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  letter-spacing: 0.02em;
+}
+
+.porto-copy p,
+.final-four-copy p,
+.obidos-copy p,
+.about-copy p {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.75;
+  text-align: left;
+}
+
+.porto-copy p + p,
+.final-four-copy p + p,
+.obidos-copy p + p,
+.about-copy p + p {
+  margin-top: 18px;
+}
+
+.contact-subtitle {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+/* HERO: imagem de fundo, chamada principal e botões de navegação. */
 .hero {
   position: relative;
   display: grid;
@@ -52,7 +173,7 @@ video {
   overflow: hidden;
   align-items: center;
   justify-items: center;
-  background: #0d1013;
+  background: var(--hero-background);
   color: #ffffff;
   text-align: center;
 }
@@ -72,7 +193,7 @@ video {
 }
 
 .hero::after {
-  background: linear-gradient(180deg, rgba(13, 16, 19, 0.2) 0%, rgba(18, 21, 24, 0.188) 100%);
+  background: var(--hero-overlay);
   content: "";
 }
 
@@ -83,22 +204,6 @@ video {
   padding-block: 64px;
 }
 
-.hero h1 {
-  margin-inline: auto;
-  font-size: clamp(2.2rem, 5.5vw, 5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-.hero__tagline {
-  margin-top: 16px;
-  font-size: clamp(1rem, 1.5vw, 1.35rem);
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
 .hero__actions {
   display: flex;
   gap: 16px;
@@ -107,7 +212,7 @@ video {
   flex-wrap: wrap;
 }
 
-/* Buttons */
+/* BOTÕES: aparência e interação dos links de ação. */
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -133,26 +238,21 @@ video {
 }
 
 .btn--outline:hover {
-  background-color: rgba(0, 162, 255, 0.1);
+  background-color: var(--accent-soft);
   transform: translateY(-2px);
 }
 
-/* --- SECTIONS --- */
+/* SECÇÕES: espaçamento vertical e linhas divisórias entre projetos. */
 .section {
   padding-block: clamp(48px, 8vw, 110px);
 }
 
-.section-heading {
-  margin-bottom: clamp(32px, 5vw, 64px);
-  font-size: clamp(2rem, 4vw, 3.8rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  text-align: center;
-  color: var(--ink);
+.divider {
+  border: 0;
+  border-top: 1px solid var(--line);
 }
 
-/* --- GRIDS & CARDS --- */
+/* PROJETOS: grelhas e imagens da Festa Porto FC e do Final Four. */
 .porto-grid,
 .final-four-grid {
   display: grid;
@@ -170,8 +270,8 @@ video {
   min-width: 0;
   overflow: hidden;
   background: var(--card-bg);
+  border: 1px solid var(--surface-border);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -195,34 +295,42 @@ video {
   justify-self: center;
 }
 
-.porto-copy p,
-.final-four-copy p,
-.obidos-copy p,
-.about-copy p {
-  font-size: clamp(1rem, 1.1vw, 1.125rem);
+.porto-grid--single-media {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.porto-grid--single-media .media-frame {
+  aspect-ratio: 0.75;
+}
+
+.project-media-rail {
+  display: grid;
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.project-media-rail .media-frame {
+  aspect-ratio: 0.85;
+}
+
+.projects-error {
+  padding-block: 24px;
   color: var(--muted);
-  line-height: 1.75;
-  text-align: left;
+  text-align: center;
 }
 
-.porto-copy p + p,
-.final-four-copy p + p,
-.obidos-copy p + p,
-.about-copy p + p {
-  margin-top: 18px;
-}
-
+/* CITAÇÕES: destaque das notas adicionais nos textos dos projetos. */
 .porto-copy blockquote,
 .final-four-copy blockquote {
   margin-top: 24px;
   padding-left: 16px;
   border-left: 3px solid var(--accent);
+  color: var(--ink);
   font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   font-style: italic;
-  color: var(--ink);
   line-height: 1.6;
 }
 
+/* VILA GAMING ÓBIDOS: alinhamento do texto e grelha da galeria. */
 .obidos-copy {
   max-width: 900px;
   margin: 0 auto clamp(32px, 4vw, 56px);
@@ -231,7 +339,7 @@ video {
 
 .obidos-gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: clamp(16px, 2vw, 28px);
 }
 
@@ -239,12 +347,7 @@ video {
   aspect-ratio: 0.85;
 }
 
-.divider {
-  border: 0;
-  border-top: 1px solid var(--line);
-}
-
-/* --- ABOUT SECTION --- */
+/* SOBRE MIM: disposição da secção de apresentação. */
 .about {
   display: grid;
   grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.6fr);
@@ -261,47 +364,35 @@ video {
   max-width: 900px;
 }
 
-/* --- CONTACT SECTION --- */
+/* CONTACTO: fundo, cartões e disposição dos meios de contacto. */
 .contact {
-  text-align: center;
-  background: var(--card-bg);
-  border-radius: 16px;
-  padding: clamp(40px, 6vw, 72px) 24px;
   margin-bottom: 60px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.contact-title {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 12px;
-}
-
-.contact-subtitle {
-  color: var(--muted);
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
-  max-width: 600px;
-  margin: 0 auto 40px;
+  padding: clamp(40px, 6vw, 72px) 24px;
+  border: 1px solid var(--soft-border);
+  border-radius: 16px;
+  background: var(--card-bg);
+  text-align: center;
 }
 
 .contact-links {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .contact-card {
   display: flex;
+  min-width: 220px;
   flex-direction: column;
   align-items: center;
-  background: var(--page-bg);
   padding: 20px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: var(--ink);
   border: 1px solid var(--line);
-  min-width: 220px;
+  border-radius: 10px;
+  background: var(--page-bg);
+  color: var(--ink);
+  text-decoration: none;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -311,24 +402,24 @@ video {
 }
 
 .contact-card__icon {
-  font-size: 1.8rem;
   margin-bottom: 8px;
+  font-size: 1.8rem;
 }
 
 .contact-card__label {
-  font-size: 0.85rem;
   color: var(--muted);
-  text-transform: uppercase;
+  font-size: 0.85rem;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .contact-card__val {
+  margin-top: 4px;
   font-size: 1rem;
   font-weight: 600;
-  margin-top: 4px;
 }
 
-/* --- WHATSAPP DROPDOWN MENU --- */
+/* MENU WHATSAPP: menu de idiomas e respetivos estados de interação. */
 .whatsapp-dropdown {
   position: relative;
   display: inline-block;
@@ -339,23 +430,22 @@ video {
 }
 
 .whatsapp-menu {
-  display: none;
   position: absolute;
+  z-index: 100;
   bottom: calc(100% + 10px);
   left: 50%;
-  transform: translateX(-50%);
+  display: none;
   width: 100%;
   min-width: 220px;
-  background: #0f172a;
+  overflow: hidden;
+  transform: translateX(-50%);
   border: 1px solid var(--accent);
   border-radius: 10px;
+  background: var(--menu-background);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  overflow: hidden;
 }
 
 .whatsapp-menu::after {
-  content: "";
   position: absolute;
   top: 100%;
   left: 50%;
@@ -363,6 +453,7 @@ video {
   border-width: 6px;
   border-style: solid;
   border-color: var(--accent) transparent transparent transparent;
+  content: "";
 }
 
 .whatsapp-dropdown:hover .whatsapp-menu,
@@ -374,15 +465,15 @@ video {
   display: block;
   padding: 12px 16px;
   color: var(--ink);
-  text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
   text-align: center;
+  text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .whatsapp-menu a:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--surface-border);
 }
 
 .whatsapp-menu a:hover {
@@ -390,14 +481,13 @@ video {
   color: #ffffff;
 }
 
+/* RODAPÉ: separador e espaçamento da linha final. */
 .footer-copy {
-  color: var(--muted);
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 24px;
+  border-top: 1px solid var(--soft-border);
 }
 
-/* --- RESPONSIVE DESIGN --- */
+/* TABLET: reorganização das grelhas e da secção Sobre Mim. */
 @media (max-width: 960px) {
   .site-shell {
     width: min(100% - 32px, var(--content-width));
@@ -415,6 +505,10 @@ video {
     max-width: 100%;
   }
 
+  .porto-grid--single-media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .about {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -425,6 +519,7 @@ video {
   }
 }
 
+/* TELEMÓVEL: grelhas, cartões e menu adaptados a ecrãs pequenos. */
 @media (max-width: 640px) {
   .site-shell {
     width: min(100% - 24px, var(--content-width));
@@ -441,12 +536,20 @@ video {
     grid-column: auto;
   }
 
+  .porto-grid--single-media {
+    grid-template-columns: 1fr;
+  }
+
   .media-frame--portrait,
   .media-frame--portrait-tall {
     aspect-ratio: 1;
   }
 
   .obidos-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-media-rail {
     grid-template-columns: 1fr;
   }
 
@@ -462,7 +565,7 @@ video {
 
   .whatsapp-menu {
     left: 0;
-    transform: none;
     width: 100%;
+    transform: none;
   }
 }

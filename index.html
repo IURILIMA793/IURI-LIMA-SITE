@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="pt-BR">
+<!-- TEMA: altere "padrao" para "natal" ou "pascoa"; fundos opcionais são configurados em style.css. -->
+<html lang="pt-BR" data-theme="natal">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +41,7 @@
     <header class="hero">
       <img
         class="hero__image"
-        src="1-imagens/img-superor.png"
+        src="1-imagens/img-superior.png"
         alt="Equipamentos de audiovisual e regie de vídeo"
         onerror="this.hidden = true"
       />
@@ -51,216 +52,100 @@
         </p>
         <div class="hero__actions">
           <a href="#contact" class="btn btn--primary">Entrar em Contacto</a>
-          <a href="#porto-title" class="btn btn--outline">Ver Projetos</a>
+          <a href="#projects" class="btn btn--outline">Ver Projetos</a>
         </div>
       </div>
     </header>
 
     <!-- Main Content -->
-    <main class="site-shell">
-      <!-- Section: Festa Porto FC 2026 -->
-      <section class="section porto-section" aria-labelledby="porto-title">
-        <h2 class="section-heading" id="porto-title">Festa Porto FC 2026</h2>
-        <div class="porto-grid">
-          <figure class="porto-media media-frame media-frame--portrait">
-            <video controls autoplay muted loop playsinline>
-              <source src="1-videos/festa-porto-aerea.mp4" type="video/mp4" />
-              Seu navegador não suporta a exibição deste vídeo.
-            </video>
-          </figure>
+    <main>
+      <section class="projects-background" aria-label="Projetos">
+        <div class="site-shell">
+          <div id="projects" aria-live="polite"></div>
+          <hr class="divider" />
+        </div>
+      </section>
 
-          <div class="porto-copy">
+      <div class="site-shell">
+        <!-- Section: Sobre Mim -->
+        <section class="section about" aria-labelledby="about-title">
+          <h2 class="section-heading" id="about-title">
+            Técnico em Audiovisual
+          </h2>
+          <div class="about-copy">
             <p>
-              Responsável por toda a gestão dos ecrãs LED. Havia dois ecrãs de 7
-              × 12 metros e mais cinco ecrãs para o restante da avenida, em
-              formato 16:9. Fiz o gerenciamento e processamento em conjunto com
-              os softwares NovaLCT, para configurar o mapping de cada LED, e
-              processadores MCTRL4K e VX1000.
+              Chamo-me Iuri Lima, sou brasileiro e técnico de audiovisual desde
+              2018. Trabalho com sistemas NovaStar, Huidu e Linsn para mapping
+              de ecrãs e utilizo Resolume Arena, Stream Deck e Blackmagic para
+              gerenciamento de conteúdos. Na parte de áudio, tenho utilizado
+              X32, M32, Wing e Soundcraft.
             </p>
             <p>
-              Para o gerenciamento de imagem, usei duas entradas Blackmagic para
-              captura de sinal via SDI e dois notebooks com Resolume Arena 7
-              para os demais conteúdos. Processadores, switch e softwares
-              estavam interligados via rede, com uma Stream Deck XL para
-              operação.
+              Atualmente resido em Portugal e trabalho como autónomo com a
+              empresa Fun Addict. Como técnico de vídeo e coordenador técnico
+              de equipa, realizo visitas técnicas, separação e carga de
+              material, montagem, operação e desmontagem de eventos. Trabalho
+              em concertos, eventos corporativos e desportivos.
             </p>
           </div>
+        </section>
 
-          <figure class="porto-media media-frame media-frame--portrait-tall">
-            <video controls autoplay muted loop playsinline>
-              <source src="1-videos/festa-porto-regie.MOV" type="video/mp4" />
-              Seu navegador não suporta a exibição deste vídeo.
-            </video>
-          </figure>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <!-- Section: Final Four 2026 -->
-      <section
-        class="section final-four-section"
-        aria-labelledby="final-four-title"
-      >
-        <h2 class="section-heading" id="final-four-title">Final Four 2026</h2>
-        <div class="final-four-grid">
-          <figure class="final-four-media media-frame media-frame--portrait">
-            <video controls autoplay muted loop playsinline>
-              <source src="1-videos/finalFour-edit.mp4" type="video/mp4" />
-              Seu navegador não suporta a exibição deste vídeo.
-            </video>
-          </figure>
-
-          <div class="final-four-copy">
-            <p>
-              Participei neste evento com a empresa Fun Addict, em Portugal.
-              Fiquei responsável pelo gerenciamento da primeira linha de LED em
-              campo e também do palco de premiação dos finalistas, utilizando
-              painéis P10 e um processador MCTRL4K.
-            </p>
-            <p>
-              Todo o sistema foi interligado via rede. Usei Stream Deck e
-              Resolume Arena para a parte de vídeo. O scoreboard fixo do estádio
-              também foi gerenciado pela nossa equipa.
-            </p>
-            <blockquote>
-              “Não fiz a operação no dia do jogo, mas realizei todo o processo
-              de montagem, mapping e conectividade para o sistema funcionar como
-              esperado.”
-            </blockquote>
-          </div>
-
-          <figure
-            class="final-four-media media-frame media-frame--portrait-tall"
-          >
-            <video controls autoplay muted loop playsinline>
-              <source src="1-videos/finalFour-geral.mov" type="video/mp4" />
-              Seu navegador não suporta a exibição deste vídeo.
-            </video>
-          </figure>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <!-- Section: Vila Gaming Óbidos 2026 -->
-      <section class="section obidos-section" aria-labelledby="obidos-title">
-        <h2 class="section-heading" id="obidos-title">
-          Vila Gaming Óbidos 2026
-        </h2>
-        <div class="obidos-copy">
-          <p>
-            Neste trabalho, fui responsável por receber os sinais de oito PS5 e
-            gerir a transmissão local para o ecrã. O sistema Blackmagic era
-            controlado por presets via Stream Deck. Cada cabine para dois
-            jogadores tinha ecrãs LED no fundo e na mesa, num total de quatro
-            cabines, oito jogadores e duas consolas por cabine. Foram três dias
-            de evento, concluídos com sucesso.
+        <!-- Section: Contato / Footer -->
+        <footer
+          class="section contact"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <h2 class="contact-title" id="contact-title">Entre em Contacto</h2>
+          <p class="contact-subtitle">
+            Disponível para freelancers, coordenação técnica e eventos
+            desportivos em Portugal e na Europa.
           </p>
-        </div>
-        <div class="obidos-gallery">
-          <figure class="obidos-media media-frame">
-            <img
-              src="1-imagens/obidos-geral-frente.jpg"
-              alt="Mesa de regie de vídeo da Vila Gaming Óbidos"
-              onerror="this.hidden = true"
-            />
-          </figure>
-          <figure class="obidos-media media-frame">
-            <img
-              src="1-imagens/obidos-selfie.jpg"
-              alt="Iuri Lima na regie de vídeo do evento"
-              onerror="this.hidden = true"
-            />
-          </figure>
-          <figure class="obidos-media media-frame">
-            <img
-              src="1-imagens/obidos-geral-regie.jpg"
-              alt="Cabines e ecrãs LED da Vila Gaming Óbidos"
-              onerror="this.hidden = true"
-            />
-          </figure>
-        </div>
-      </section>
 
-      <hr class="divider" />
-
-      <!-- Section: Sobre Mim -->
-      <section class="section about" aria-labelledby="about-title">
-        <h2 class="section-heading" id="about-title">Técnico em Audiovisual</h2>
-        <div class="about-copy">
-          <p>
-            Chamo-me Iuri Lima, sou brasileiro e técnico de audiovisual desde
-            2018. Trabalho com sistemas NovaStar, Huidu e Linsn para mapping de
-            ecrãs e utilizo Resolume Arena, Stream Deck e Blackmagic para
-            gerenciamento de conteúdos. Na parte de áudio, tenho utilizado X32,
-            M32, Wing e Soundcraft.
-          </p>
-          <p>
-            Atualmente resido em Portugal e trabalho como autónomo com a empresa
-            Fun Addict. Como técnico de vídeo e coordenador técnico de equipa,
-            realizo visitas técnicas, separação e carga de material, montagem,
-            operação e desmontagem de eventos. Trabalho em concertos, eventos
-            corporativos e desportivos.
-          </p>
-        </div>
-      </section>
-
-      <!-- Section: Contato / Footer -->
-      <footer
-        class="section contact"
-        id="contact"
-        aria-labelledby="contact-title"
-      >
-        <h2 class="contact-title" id="contact-title">Entre em Contacto</h2>
-        <p class="contact-subtitle">
-          Disponível para freelancers, coordenação técnica e eventos desportivos
-          em Portugal e na Europa.
-        </p>
-
-        <div class="contact-links">
-          <div class="whatsapp-dropdown">
-            <div class="contact-card whatsapp-card">
-              <span class="contact-card__icon">💬</span>
-              <span class="contact-card__label">WhatsApp</span>
-              <span class="contact-card__val">+351 937 397 563</span>
+          <div class="contact-links">
+            <div class="whatsapp-dropdown">
+              <div class="contact-card whatsapp-card">
+                <span class="contact-card__icon">💬</span>
+                <span class="contact-card__label">WhatsApp</span>
+                <span class="contact-card__val">+351 937 397 563</span>
+              </div>
+              <div class="whatsapp-menu">
+                <a
+                  href="https://wa.me/+351937397563?text=Ol%C3%A1%20Iuri!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20uma%20oportunidade%2Fprojeto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🇧🇷 Português
+                </a>
+                <a
+                  href="https://wa.me/+351937397563?text=%C2%A1Hola%20Iuri!%20He%20visto%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20un%20proyecto%2Foportunidad."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🇪🇸 Español
+                </a>
+                <a
+                  href="https://wa.me/+351937397563?text=Hi%20Iuri!%20I%E2%80%99ve%20seen%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20project%2Fopportunity."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🇬🇧 English
+                </a>
+              </div>
             </div>
-            <div class="whatsapp-menu">
-              <a
-                href="https://wa.me/+351937397563?text=Ol%C3%A1%20Iuri!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20uma%20oportunidade%2Fprojeto."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🇧🇷 Português
-              </a>
-              <a
-                href="https://wa.me/+351937397563?text=%C2%A1Hola%20Iuri!%20He%20visto%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20un%20proyecto%2Foportunidad."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🇪🇸 Español
-              </a>
-              <a
-                href="https://wa.me/+351937397563?text=Hi%20Iuri!%20I%E2%80%99ve%20seen%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you%20about%20a%20project%2Fopportunity."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🇬🇧 English
-              </a>
-            </div>
+
+            <a href="mailto:iurilima793@icloud.com" class="contact-card">
+              <span class="contact-card__icon">✉️</span>
+              <span class="contact-card__label">E-mail</span>
+              <span class="contact-card__val">iurilima793@icloud.com</span>
+            </a>
           </div>
 
-          <a href="mailto:iurilima793@icloud.com" class="contact-card">
-            <span class="contact-card__icon">✉️</span>
-            <span class="contact-card__label">E-mail</span>
-            <span class="contact-card__val">iurilima793@icloud.com</span>
-          </a>
-        </div>
-
-        <div class="footer-copy">
-          <p>© Iuri Lima · Sports Events · LED Systems · Live Production</p>
-        </div>
-      </footer>
+          <div class="footer-copy">
+            <p>© Iuri Lima · Sports Events · LED Systems · Live Production</p>
+          </div>
+        </footer>
+      </div>
     </main>
 
     <script src="script.js"></script>

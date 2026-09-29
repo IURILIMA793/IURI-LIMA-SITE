@@ -1,0 +1,71 @@
+[
+  {
+    "id": "vila-gaming-obidos-2026",
+    "title": "Vila Gaming Óbidos 2026",
+    "layout": "gallery",
+    "paragraphs": [
+      "Neste trabalho, fui responsável por receber os sinais de oito PS5 e gerir a transmissão local para o ecrã. O sistema Blackmagic era controlado por presets via Stream Deck. Cada cabine para dois jogadores tinha ecrãs LED no fundo e na mesa, num total de quatro cabines, oito jogadores e duas consolas por cabine. Foram três dias de evento, concluídos com sucesso."
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "1-imagens/obidos-geral-frente.jpg",
+        "alt": "Mesa de regie de vídeo da Vila Gaming Óbidos"
+      },
+      {
+        "type": "image",
+        "src": "1-imagens/obidos-selfie.jpg",
+        "alt": "Iuri Lima na regie de vídeo do evento"
+      },
+      {
+        "type": "image",
+        "src": "1-imagens/obidos-geral-regie.jpg",
+        "alt": "Cabines e ecrãs LED da Vila Gaming Óbidos"
+      }
+    ]
+  },
+
+  {
+    "id": "final-four-2026",
+    "title": "Final Four 2026",
+    "layout": "event",
+    "paragraphs": [
+      "Participei neste evento com a empresa Fun Addict, em Portugal. Fiquei responsável pelo gerenciamento da primeira linha de LED em campo e também do palco de premiação dos finalistas, utilizando painéis P10 e um processador MCTRL4K.",
+      "Todo o sistema foi interligado via rede. Usei Stream Deck e Resolume Arena para a parte de vídeo. O scoreboard fixo do estádio também foi gerenciado pela nossa equipa."
+    ],
+    "quote": "“Não fiz a operação no dia do jogo, mas realizei todo o processo de montagem, mapping e conectividade para o sistema funcionar como esperado.”",
+    "media": [
+      {
+        "type": "video",
+        "src": "1-videos/finalFour-edit.mp4",
+        "alt": "Vídeo do evento Final Four"
+      },
+      {
+        "type": "video",
+        "src": "1-videos/finalFour-geral.mov",
+        "alt": "Vista geral do evento Final Four"
+      }
+    ]
+  },
+  {
+    "id": "festa-porto-2026",
+    "title": "Festa Porto FC 2026",
+    "layout": "event",
+    "paragraphs": [
+      "Fui responsável por toda a gestão dos ecrãs LED. Havia dois ecrãs de 7 × 12 metros e mais cinco ecrãs para o restante da avenida, em formato 16:9. Fiz o gerenciamento e processamento em conjunto com os softwares NovaLCT, para configurar o mapping de cada LED, e processadores MCTRL4K e VX1000.",
+      "Para o gerenciamento de imagem, usei duas entradas Blackmagic para captura de sinal via SDI e dois notebooks com Resolume Arena 7 para os demais conteúdos. Processadores, switch e softwares estavam interligados via rede, com uma Stream Deck XL para operação."
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "1-videos/festa-porto-aerea.mp4",
+        "alt": "Vista aérea da Festa Porto FC"
+      },
+      {
+        "type": "video",
+        "src": "1-videos/festa-porto-regie.MOV",
+        "alt": "Regie de vídeo da Festa Porto FC"
+      }
+    ]
+  }
+]
