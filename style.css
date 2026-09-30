@@ -1,5 +1,30 @@
 @charset "UTF-8";
 
+/* TEMA de thema1: personalize as cores e a imagem de fundo do tema normal. */
+:root {
+  color-scheme: dark;
+  --page-bg: #589ee532;
+  --theme-background-image: none;
+  --card-bg: #057aef1b;
+  --ink: rgba(216, 215, 215, 0.671);
+  --muted: #ffffffcd;
+  --accent: #00a2ff;
+  --accent-hover: #0082cc;
+  --accent-soft: rgba(0, 162, 255, 0.1);
+  --line: #ffffff;
+  --hero-background: #0d1013;
+  --hero-overlay: linear-gradient(180deg,
+      rgba(13, 16, 19, 0.2) 0%,
+      rgba(18, 21, 24, 0.188) 100%);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --soft-border: rgba(255, 255, 255, 0.05);
+  --menu-background: #0b1c44;
+  --content-width: 1400px;
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
 /* TEMA DE thema2: ativado com data-theme="natal" no elemento html de index.html. */
 
 /* -- para trocar o fundo so tirar none e colocar esse cod (com a imagem escolhida na pasta)
@@ -24,33 +49,6 @@ theme-background-image: url("1-imagens/fundo-natal-exemple.jpg");*/
   --accent-hover: #9848a8;
   --accent-soft: rgba(192, 108, 207, 0.12);
   --line: #ead6f2;
-}
-
-/* TEMA PADRÃO: personalize as cores e a imagem de fundo do tema normal. */
-:root {
-  color-scheme: dark;
-  --page-bg: #589ee532;
-  --theme-background-image: none;
-  --card-bg: #057aef1b;
-  --ink: rgba(216, 215, 215, 0.671);
-  --muted: #ffffffcd;
-  --accent: #00a2ff;
-  --accent-hover: #0082cc;
-  --accent-soft: rgba(0, 162, 255, 0.1);
-  --line: #ffffff;
-  --hero-background: #0d1013;
-  --hero-overlay: linear-gradient(
-    180deg,
-    rgba(13, 16, 19, 0.2) 0%,
-    rgba(18, 21, 24, 0.188) 100%
-  );
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --soft-border: rgba(255, 255, 255, 0.05);
-  --menu-background: #0b1c44;
-  --content-width: 1400px;
-  --font-sans:
-    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
 }
 
 /* BASE GLOBAL: dimensões, tipografia e fundo geral do site. */
@@ -143,10 +141,10 @@ video {
   text-align: left;
 }
 
-.porto-copy p + p,
-.final-four-copy p + p,
-.obidos-copy p + p,
-.about-copy p + p {
+.porto-copy p+p,
+.final-four-copy p+p,
+.obidos-copy p+p,
+.about-copy p+p {
   margin-top: 18px;
 }
 
