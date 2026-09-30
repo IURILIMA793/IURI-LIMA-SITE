@@ -34,10 +34,10 @@ theme-background-image: url("1-imagens/fundo-natal-exemple.jpg");*/
   --page-bg: rgba(26, 149, 38, 0.413);
   --theme-background-image: none;
   --card-bg: rgba(9, 237, 9, 0.189);
-  --accent: red;
+  --accent: #ff0000;
   --accent-hover: #c83232;
   --accent-soft: rgba(75, 230, 109, 0.93);
-  --line: red;
+  --line: #ff0000;
 }
 
 /* TEMA DE thema3: ativado com data-theme="pascoa" no elemento html de index.html. */
